@@ -1,0 +1,46 @@
+
+.circle{
+    border-radius: 50%;
+}
+
+.triangle {
+    background: 0 0;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-width: 0;
+    border-style: solid;
+    height: 0;
+    opacity: .87;
+    position: fixed;
+    transform: none;
+    transition: transform 3.3s;
+    width: 0;
+}
+
+.symmetric.yellow{
+    background-color: #dddd00bd;
+}
+
+.triangle.yellow{
+    border-bottom-color: #dddd00bd;
+}
+
+.symmetric.green{
+    background-color: #279227bd;
+}
+
+.triangle.green{
+    border-bottom-color: #279227bd;
+}
+
+.symmetric.blue{
+    background-color: #4444e0bd;
+}
+
+.triangle.blue{
+    border-bottom-color: #4444e0bd;
+}
+
+.background_figure{
+    position: absolute;
+}

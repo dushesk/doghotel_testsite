@@ -1,0 +1,35 @@
+
+form{
+    width: fit-content;
+}
+
+#furniture_selection{
+    display: flex;
+    align-items: end;
+}
+
+.wrap_inf{
+    margin: 15px;
+}
+
+#color_furniture input, #furniture input{
+    margin: 5px;
+}
+
+#count_furniture{
+    margin: 0 2px;
+}
+
+#count_furniture input{
+    margin: 0.7px;
+}
+
+#count_furniture legend{
+    margin: 4px 0;
+}
+
+button{
+    background: rgb(131, 180, 90);
+    border-radius: 3pt;
+    margin: 5px;
+}

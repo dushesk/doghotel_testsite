@@ -1,0 +1,97 @@
+*{
+    color: black;
+}
+
+.conteiner{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.cont_title{
+    color: black;
+    font-size: clamp(16pt, 5vw, 30pt);
+    margin: 50px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
+.cont_title span{
+    color: #80bf6d;
+    font-size: clamp(16pt, 5vw, 30pt);
+}
+
+.answer_list{
+    margin: 30px;
+}
+
+.answer_text{
+    color: black;
+    font-size: clamp(12pt, 5vw, 16pt);
+    margin-top: 15px;
+    margin-left: 40px;
+    
+}
+.answer_item{
+    background-image: url("images/symbol-cross.webp");
+    background-repeat: no-repeat;
+    background-size: 23px 23px;
+    background-position: left top 1px;
+}
+
+.answer_item_2{
+    background-image: url("images/checked-symbol.webp");
+    background-repeat: no-repeat;
+    background-size: 23px 23px;
+    background-position: left top 1px;
+}
+
+.wrapper{
+    display: flex;
+}
+
+@media (max-width: 1024px){
+    .img_help{
+        display: none;
+    }
+}
+
+/* price list */
+
+th,
+td {
+    padding: 21px 40px 18px 46px;
+    font-size: 14pt;
+}
+
+table {
+    margin: 100px;
+    border-spacing: 0;
+    border: 1px solid var(--main_color);
+    border-radius: 20pt;
+    overflow: hidden;
+    justify-self: center;
+    box-shadow: 0 0 20px 1px grey;
+}
+
+table td:nth-child(2n){
+    background-color: #80bf6d;
+}
+
+table tr:nth-child(2n){
+    background-color: #aaaaaa6e;
+    z-index: 4;
+}
+
+
+
+
+
+
+
+
+
+
+
+

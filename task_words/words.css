@@ -1,0 +1,159 @@
+:root{
+    --margin: 20px;
+}
+
+*{
+    font-family: monospace;
+    color: white;
+}
+
+body{
+    background: radial-gradient(at right bottom,rgb(195,164,87) 37%, rgb(252,70,107) 100%);
+    overflow: hidden;
+}
+
+.header{
+    height: calc(1vh + 5px);
+    margin: 0;
+}
+
+.headerMenu{
+    height: 30px;
+    width: 30px;
+    border-radius: 20pt;
+    background: rgba(255, 255, 255, 0.199);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toHome{
+    text-decoration: none;
+}
+
+.conteiner{
+    margin: var(--margin);
+    height: calc(97vh - 2 * var(--margin));
+    display: flex;
+    flex-direction: column;
+    gap: var(--margin);
+    overflow: hidden;
+}
+
+.words_menu{
+    border-radius: 20pt;
+    background: rgba(255, 255, 255, 0.199);
+    height: 15%;
+    width: 100%;
+    min-width: 250px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: auto;
+    /* scroll-snap-type: none; */
+}
+
+/* стилизация скролбара */
+.words_menu::-webkit-scrollbar, .output::-webkit-scrollbar{
+    width: 0px;
+}
+
+.word{
+    margin: 5px 0 0 20px;
+    padding: 5px 10px;
+    background: rgba(255, 255, 255, 0.589);
+    border-radius: 20pt;
+    word-wrap: break-word;
+}
+
+.wrap_contet{
+    height: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--margin);
+
+}
+
+.content_field{
+    border-radius: 20pt;
+    background: rgba(255, 255, 255, 0.199);
+    min-height: 200px;
+    min-width: 250px;
+    flex: 2 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.field{
+    width: 90%;
+    height: 90%;
+    background: rgba(255, 255, 255, 0.582);
+    border-radius: 10pt;
+}
+
+.edit_text{
+    border-radius: 20pt;
+    background: rgba(255, 255, 255, 0.199);
+    min-height: 200px;
+    min-width: 250px;
+    max-width: 100%;
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/* форма ввода */
+
+.form{
+    margin: clamp(5px, 5%, 30px);
+}
+
+.form input{
+    border-radius: 15pt;
+    padding: 5px 10px;
+    height: 30px;
+    border: 0px;
+    background: rgba(255, 255, 255, 0.534);
+    /* box-shadow: 0px 0px 13px 4px rgba(255, 255, 255, 0.712) inset; */
+}
+
+.button{
+    border-radius: 15pt;
+    padding: 10px;
+    height: 40px;
+    border: 0px;
+    background: rgba(116, 116, 116, 0.418);
+}
+
+.button:hover{
+    background: rgba(51, 51, 51, 0.418);
+    transform: scale(1.05);
+}
+
+.button:active{
+    background: rgba(51, 51, 51, 0.616);
+}
+
+.output{
+    margin: clamp(5px, 5%, 30px);
+    min-height: 50px;
+    height: auto;
+    padding: 5px 10px;
+    width: clamp(150px, 80%, 900px);
+    background: rgba(255, 255, 255, 0.247);
+    border-radius: 10pt;
+    word-wrap: break-word;
+    overflow: scroll;
+}
+
+/* .output_comment{
+    align-self: flex-start;
+    margin: 20px;
+    height: clamp(90px, 40%, 500px);
+    width: clamp(150px, 50%, 600px);
+    background: rgba(189, 189, 189, 0.411);
+    border-radius: 20pt;
+} */

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/game_menu.css" />
+    <link rel="stylesheet" href="styles/background.css" />
+    <link rel="stylesheet" href="styles/general.css" />
+    <title>Find figure</title>
+</head>
+<body>
+    <script src="js/settings.js"></script>
+    
+    <div class="conteiner">
+        <div class="wrap_menu">
+            <form>
+                <input class="menu_item" type="text" id="user_name" placeholder="твое имя" required>
+                <button class="menu_item start" id="start" type="submit">начать</button>
+            </form>
+            <form action="./stats.html">
+                <button class="menu_item show_stats">статистика</button>
+            </form>
+            <form action="../index.html">
+                <button class="menu_item back_to_site">домой</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="js/background_generator.js"></script>
+    <script src="js/handler.js" type="module"></script>
+    
+</body>
+</html>

@@ -1,0 +1,85 @@
+:root{
+    --backgr_color: rgb(255, 184, 208);
+    --letter_color: rgb(158 129 255);
+}
+
+.conteiner{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title_ex{
+    margin-top: 60px;
+    margin-bottom: 30px;
+    color: black;
+    font-size: 14pt;
+    font-family: monospace;
+    text-align: center;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: var(--backgr_color);
+    position: relative;
+    border: 5px solid rgb(252, 111, 188);
+    border-radius: 2%; 
+    margin: 20px;
+    margin-left: 50px;
+}
+
+#letter_I{
+    fill: var(--letter_color);
+}
+
+#in_letter_D{
+    fill: var(--backgr_color);
+}
+
+#out_letter_D{
+    fill: var(--letter_color);
+}
+
+#img{
+    max-width: 100px;
+    position: absolute;
+    right: 50px;
+    bottom: 0px;
+    opacity: 0;
+}
+
+#name{
+    position: absolute;
+    width: 60%;
+    right:0;
+    bottom: 0;
+    opacity: 0;
+}
+
+#name p{
+    margin: 10px;
+    margin-bottom: 15px;
+    font-family: versus;
+    font-size: 80%;
+    font-weight: bold;
+    
+    color: aliceblue;
+}
+
+@keyframes wiggle {
+    0% { top: 0px; }
+   25% { top: 15px; }
+   50% { top: 0px; }
+   80% { top: 15px; }
+   85% { top: 0px; }
+   95% { top: 15px; }
+  100% { top: 0px; }
+}
+
+#btn:hover{
+    animation: wiggle 2s forwards;
+}
+

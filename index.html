@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache">
+    <link rel="stylesheet" href="styles/header_footer.css" />
+    <link rel="stylesheet" href="styles/style_start.css" />
+
+    <title>Dog Hotel</title>
+  </head>
+  <body>
+    <script src="js/setHeader.js"></script>
+    
+    <div class="conteiner" id="first_conteiner">
+        
+        <div class="title_wrap">
+            <h class="slogan">Every day’s a dog day</h>
+            <h1 class="under_slogan">Just your dog and all his friends</h1>
+
+            <button class="button_to_book">
+                <a href="#">To book</a>
+            </button>
+        </div>        
+    </div>
+    <div class="conteiner" id="second_conteiner">
+        <div class="cont_title">How does it works</div>
+        <div class="frame_wrap">
+            <div class="frame" id="frame1">
+                <div class="icon">
+                    <img src="styles/images/how1.svg"/>
+                </div>
+                <div class="frame_title">Order</div>
+                <div class="frame_text">
+                    Leave an order for home overexposure of the dog on the website or by phone. We clarify the details about your pet and select a suitable dog sitter
+                </div>
+            </div>
+            <div class="frame" id="frame2">
+                <div class="icon">
+                    <img src="styles/images/how2.svg"/>
+                </div>
+                <div class="frame_title">
+                    Detailed acquaintance
+                </div>
+                <div class="frame_text">
+                    The dogsitter will come and meet your pet. The service costs 4$
+                </div>
+            </div>
+            <div class="frame" id="frame3">
+                <div class="icon">
+                    <img src="styles/images/how3.svg"/>
+                </div>
+                <div class="frame_title">
+                    Payment
+                </div>
+                <div class="frame_text">
+                    You pay for the order for overexposure of the dog on our website. You can use any known payment system
+                </div>
+            </div>
+            <div class="frame" id="frame4">
+                <div class="icon">
+                    <img src="styles/images/how4-p.svg"/>
+                </div>
+                <div class="frame_title">
+                    Transportation
+                </div>
+                <div class="frame_text">
+                    It is possible to transport your pet by dogsitter's car or in a zootaxi. We will provide transportation according to all safety rules. Together with the animal, it is recommended to transfer the dog's usual food, her favorite toys, if necessary, cages and disposable diapers
+                </div>
+            </div>
+            <div class="frame" id="frame5">
+                <div class="icon">
+                    <img src="styles/images/how5-p.svg"/>
+                </div>
+                <div class="frame_title">Care</div>
+                <div class="frame_text">
+                    Full-fledged care of your pet: supervision, feeding, walking, washing and combing the dog's fur and, of course, games. If a dog has a disease, it needs to provide veterinary care - we will take care of it. The places where the animals stay are regularly treated for parasites. Your pet will feel happy at home
+                </div>
+            </div>
+            <div class="frame" id="frame6">
+                <div class="icon">
+                    <img src="styles/images/how6-p.svg"/>
+                </div>
+                <div class="frame_title">Report</div>
+                <div class="frame_text">
+                    At a time convenient for you, we will contact you via video link so that you can make sure that your pet is cheerful, cheerful and healthy. Or we will send reports to the messenger or to the mail
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="conteiner" id="third_conteiner">
+        <div class="cont_title">Gallery of our pets</div>
+
+        <div class="wrap_gallery">
+            <div><img class="gallery" src="styles/images/gallery_1.jpg"/></div>
+            <div><img class="gallery" src="styles/images/gallery_2.jpg"/></div>
+            <div><img class="gallery" src="styles/images/gallery_3.jpg"/></div>
+            <div><img class="gallery" src="styles/images/gallery_4.jpg"/></div>
+            <div><img class="gallery" src="styles/images/gallery_5.jpg"/></div>
+            <div><img class="gallery" src="styles/images/gallery_6.jpg"/></div>
+        </div>
+    </div>
+    <div class="conteiner" id="fourth_conteiner">
+        <div class="cont_title">The safety of your pet is our main concern</div>
+        <div class="frame_wrap">
+            <div class="frame" id="frame1">
+                <div class="icon">
+                    <img src="styles/images/standart1.svg"/>
+                </div>
+                <div class="frame_title">We insure dogs</div>
+                <div class="frame_text">
+                    The animal is insured for the duration of the service. If the pet is injured due to the fault of the dogsitter, he will be provided with veterinary care at the expense of the service
+                </div>
+            </div>
+            <div class="frame" id="frame2">
+                <div class="icon">
+                    <img src="styles/images/standart2-p.svg"/>
+                </div>
+                <div class="frame_title">
+                    Safe walking
+                </div>
+                <div class="frame_text">
+                    We guarantee the safety of your pet on a walk. Each walker is equipped with reliable equipment: a walker belt, a leash, a safety collar
+                </div>
+            </div>
+            <div class="frame" id="frame3">
+                <div class="icon">
+                    <img src="styles/images/standart3.svg"/>
+                </div>
+                <div class="frame_title">
+                    The veterinarian is in touch
+                </div>
+                <div class="frame_text">
+                    Our partners provide round-the-clock information support to dogsiter on dog health issues
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="conteiner" id="fourth_conteiner">
+        <div class="wrap_feedback">
+            <div class="wrap_header">Any other questions? Order a consultation</div>
+            <div class="wrap_input">
+                <input placeholder="Phone number" class="input" id="input"></input>
+                <button type="submit" class="btn" id="btn">
+                    Order a call
+                </button>
+            </div>
+
+
+        </div>
+    </div>
+    <script>
+        document.getElementById("btn").onclick = function(e) {
+            document.getElementById("input").value = "";
+        }
+    </script>
+
+    <script src="js/setFooter.js"></script>
+  </body>
+</html>

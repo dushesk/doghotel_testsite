@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="words.css" />
+    <title>Слова</title>
+</head>
+<body>
+    <div class="header">
+        <div class="headerMenu"><a class="toHome" href="..\index.html">⌂</a></div>
+    </div>
+    <div class="conteiner">
+        <div class="words_menu"></div>
+        <div class="wrap_contet">
+            <div class="content_field">
+                <div class="field droppable"></div>
+            </div>
+            <div class="edit_text">
+                <form class="form" onsubmit="return false">
+                    <input id="input" type="text" name="input" placeholder="...">
+                    <button class="button" type="button">Разобрать</button>
+                </form>
+                <div class="output"></div>
+            </div>
+        </div>
+
+    </div>
+    <script type="module" src="main.js"></script>
+</body>
+</html>

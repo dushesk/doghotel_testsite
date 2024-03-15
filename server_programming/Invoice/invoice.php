@@ -32,7 +32,7 @@
             </div>
         </nav>
     </header>
-    <form action="invoice.php" method="post">
+    <form action="invoice.php" method="post" enctype="multipart/form-data">
         <legend style="text-align: center;"><b>Заказ мебели</b></legend>
         <div class="wrap_inf" id="customer_info" >
             <label>Фамилия <input type="text" id="customer_name" name="customer_name" value="Имайкина"></label>
@@ -86,7 +86,7 @@
 
         </div>
 
-        <input type="file" id="input_file"><br>
+        <input type="file" name="file"><br>
 
         <button type="submit" name="submit">Оформить заказ</button>
     </form>
@@ -115,17 +115,19 @@
             // информация о заказе
             $material = $_POST['material'];
             $furniture = $_POST['furniture'];
-            // обработка файла
 
-            $prices = []; // цены на мебель
-            if (isset($_FILES['input_file']) && $_FILES['input_file']['error'] === UPLOAD_ERR_OK) {
-                // Путь к временному файлу, куда загружен файл
-                $file_price = $_FILES['input_file']['tmp'];
+
+            // обработка файла
+            $new_file = $folder_path.basename($_FILES['file']['name']);
+            if (move_uploaded_file($_FILES['file']['tmp_name'], $new_file)) {
+                $file_price = $new_file;
             }
             else{
-                echo 'noo';
                 $file_price = $folder_path.'price.txt';
             }
+            
+
+            $prices = []; // цены на мебель
             // извлечение цен из файла
             $str_prices = file_get_contents($file_price);
             $file_lines = explode("\n", $str_prices);
@@ -145,7 +147,7 @@
                 if ($item != '0'){
                     $counts[] = $item;
                 }
-            } // удаление нулей
+            } // удаление нулей из массива с количествами
             $counts = array_diff($counts, array('0')); // приведение строк к числам
             
             // расчет стоимостей
@@ -178,10 +180,10 @@
             $section = $word->addSection();
 
             $randomNumber = 1111;
-            // do{
-            //     $randomNumber = mt_rand(1000, 9999);
-            //     $fileName = $folder_path . 'Документ_на_выдачу_'.$randomNumber . '.docx';
-            // } while (file_exists($fileName));
+            do{
+                $randomNumber = mt_rand(1000, 9999);
+                $fileName = $folder_path . 'Документ_на_выдачу_'.$randomNumber . '.docx';
+            } while (file_exists($fileName));
             
             $folder_path_img = './styles/images/';
             // заполнение документа

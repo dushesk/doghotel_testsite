@@ -48,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
     
             prevScroll = currentScroll // записываем на сколько прокручена страница на данный момент
-    
         })
   
     }

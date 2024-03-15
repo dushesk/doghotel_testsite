@@ -1,0 +1,118 @@
+
+* {
+    color: black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(245, 245, 255);
+}
+
+form{
+    margin: 20px;
+    width: fit-content;
+}
+
+#furniture_selection{
+    display: flex;
+    align-items: end;
+}
+
+.wrap_inf{
+    margin: 15px;
+}
+
+#material_furniture input, #furniture input{
+    margin: 5px;
+}
+
+#count_furniture{
+    margin: 0 2px;
+}
+
+#count_furniture input{
+    margin: 0.7px;
+}
+
+#count_furniture legend{
+    margin: 4px 0;
+}
+
+button{
+    background: rgb(131, 180, 90);
+    border-radius: 3pt;
+    border: 0;
+    padding: 8px 15px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#customer_info label {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#customer_info input, 
+#customer_info select {
+    min-width: 200px; 
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#customer_info select {
+    min-width: 212px; 
+}
+
+
+/* header */
+header {
+    background: rgb(158 129 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    transition: 0.6s;
+}
+
+.header_hidden {
+    transform: translateY(-100%);
+}
+
+.logo_wrap{
+    margin-left: 30px;
+    display: flex;
+    height: 50px;
+    width: 200px;
+}
+
+.logo_wrap a{
+    text-decoration: none;
+}
+
+.logo{
+    margin-left: 8%;
+    font-weight: bold;
+    font-size: clamp(16pt, 20pt,30pt);
+    color: #fafaff;
+}
+
+nav{
+    display: flex;
+    margin-right: 3rem;
+}
+
+.wrap_a{
+    margin-left: 3rem;
+}
+
+.wrap_a a{
+    text-decoration: none;
+    font-size: clamp(10pt, 12pt, 14pt);
+    color: #fafaff;
+}

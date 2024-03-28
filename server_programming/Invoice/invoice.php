@@ -90,7 +90,6 @@
 
         <button type="submit" name="submit">Оформить заказ</button>
     </form>
-    <script src="handler.js"></script>
     <?php 
         if (isset($_POST['submit'])) {
             require '..\vendor\autoload.php';
@@ -180,6 +179,7 @@
             $section = $word->addSection();
 
             $randomNumber = 1111;
+            // проверка случайного номера документа
             do{
                 $randomNumber = mt_rand(1000, 9999);
                 $fileName = $folder_path . 'Документ_на_выдачу_'.$randomNumber . '.docx';
@@ -217,7 +217,7 @@
             }
             $table->addRow(); // наценка за цвет
             $table->addCell(780)->addText('');
-            $table->addCell(5000)->addText($material);
+            $table->addCell(5000)->addText($material, array('bold' => false), array('alignment'=>'center', 'textAlignment'=>'center'));
             $table->addCell(2000)->addImage($folder_path_img.$file_material, array('height'=>30, 'align'=>'center'));;            
             $table->addCell(5900, array('gridSpan' => 2))->addText($extra_charges[$material], array('bold' => false), array('alignment'=>'center'));
             $table->addCell(2300)->addText(array_sum($sums), array('bold' => false), array('alignment'=>'center'));

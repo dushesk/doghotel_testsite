@@ -1,6 +1,6 @@
 
 :root{
-    --main_color: rgb(158 129 255);
+    --main_color: rgb(150 92 42);
     --back_color: rgb(245, 245, 255);
     --second-color: rgb(167, 167, 167);
 }
@@ -79,7 +79,7 @@ a{
 }
 
 footer {
-    background-color: rgb(110, 91, 173);
+    background-color: rgb(128, 81, 40);
     bottom: 0;
     margin: 0;
     width: 100%;

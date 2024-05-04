@@ -176,7 +176,17 @@ tr, th, td{
     border: 1px solid black;
 }
 
+td, th{
+    padding: 5px;
+}
+
 form{
     display: flex;
     flex-direction: column;
+    width: 100%;
+}
+
+select{
+    width: 300px;
+    margin: 10px;
 }

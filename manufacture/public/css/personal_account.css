@@ -56,9 +56,13 @@ body {
     min-height: 70%;
 }
 
+.table_conteiner{
+    overflow-x: auto;
+}
+
 .button {
     display: block;
-    max-width: 300px;
+    max-width: 320px;
     width: 100%;
     text-align: left;
     background-color: var(--dl-color-theme-secondary2);
@@ -106,4 +110,63 @@ td, th {
 td{
     max-width: 170px;
     position: relative;
+}
+
+/* Общие стили для таблицы */
+table {
+    border-collapse: collapse; /* Совмещение краев ячеек */
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+/* Стили для строк заголовка таблицы */
+table th {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd; /* Граница вокруг ячеек */
+    padding: 8px;
+}
+
+/* Стили для строк данных таблицы */
+table td {
+    border: 1px solid #ddd; /* Граница вокруг ячеек */
+    padding: 6px;
+}
+
+/* Стили для новой строки */
+.new-row {
+    background-color: #e6f7ff;
+}
+
+/* Стили для строк при наведении */
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Стили для полей ввода */
+table input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Исключение стилей для ячеек удаления */
+.delCell {
+    border: none;
+}
+
+.input-pass{
+    margin: 10px;
+}
+
+#old_pass, #new_pass, #tableSelect{
+    background-color: var(--dl-color-theme-secondary1);
+    border-radius: 5pt;
+    margin: 5px;
+}
+
+.text-center{
+    text-align: center;
 }

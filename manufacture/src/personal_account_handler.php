@@ -4,7 +4,6 @@ require_once 'config.php'; // Подключение файла конфигур
 
 // Выход пользователя
 if (isset($_POST['log_out'])) {
-    echo 'sdgsfgsdfg';
     setcookie('user_name', $user_name, -100);
     header("Location: login_page.php");
     exit();
@@ -31,13 +30,19 @@ $query->bind_result($role);
 $query->fetch();
 $query->close();
 
-// SQL-запрос для получения названий всех таблиц
-$sql = "SELECT table_name FROM information_schema.tables WHERE table_schema = '$dbname'";
 
+if ($role == 'employee'){
+    // Использование параметризованного запроса для предотвращения SQL-инъекций
+    $stmt = $con->prepare("SELECT * FROM employee_personal_info WHERE user_name = ?");
+    $stmt->bind_param("s", $user_name);
 
-// Выполнение запроса
-$tables = $con->query($sql);
+    // Выполнение запроса
+    $stmt->execute();
+    $result = $stmt->get_result();
 
+    // Закрытие соединения
+    $stmt->close();
+}
 
 
 $con->close();

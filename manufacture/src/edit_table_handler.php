@@ -6,6 +6,7 @@ $columns_name = $_SESSION['columns'];
 $deleted_rows = $_GET['s'];
 $data_json = $_GET['d'];
 
+
 $data = json_decode($data_json); // Декодировка из JSON
 
 // Удаление данных
@@ -15,11 +16,12 @@ if (!empty($deleted_rows)){
 
     // Выполняем запрос
     if ($con->query($sql) === TRUE) {
-        echo "Строки успешно удалены.";
+        echo "Строки $deleted_rows успешно удалены.";
     } else {
         echo "Ошибка при удалении строк: " . $con->error;
     }
 }
+
 // Вставка данных
 if(!empty($data)){
     try {
@@ -37,7 +39,7 @@ if(!empty($data)){
                 // Операция вставки прошла успешно
                 if ($stmt->affected_rows > 0) {
                     // Вставлено одна или более строк
-                    echo "Данные успешно добавлены в таблицу $table_name";
+                    echo "Данные успешно добавлены в таблицу $table_name <br>";
                 } else {
                     // Не было вставлено ни одной строки
                     echo "Данные не были добавлены в таблицу $table_name";

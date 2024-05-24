@@ -16,7 +16,7 @@ if (!isset($_SESSION['user_name'])) {
 }
 
 // Получаем информацию о пользователе из базы данных
-$user_name = $_SESSION['user_name'];
+$user_name = $_COOKIE['user_name'];
 $query = $con->prepare("SELECT role_name FROM users NATURAL JOIN roles WHERE user_name=?");
 if ($query === false) {
     die('Prepare failed: ' . htmlspecialchars($con->error));

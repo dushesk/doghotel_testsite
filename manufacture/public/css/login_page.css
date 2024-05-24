@@ -22,7 +22,7 @@ body{
     position: relative;
 }
 
-.wrap_login{
+.wrap_form{
     min-width: 330px;
     display: flex;
     flex-direction: column;
@@ -30,9 +30,10 @@ body{
     margin-bottom: 20px;
 }
 
-input{
+input, select{
     border-radius: var(--dl-radius-radius-inputradius);
     padding: 5px 10px;
+    min-width: 70%;
 }
 
 .input-group{

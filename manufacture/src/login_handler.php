@@ -6,6 +6,12 @@ require_once 'config.php'; // Подключение файла конфигур
 $time_cookie = 20000;
 $error_message = '';
 
+// Все названия ролей
+$sql = "SELECT role_name FROM roles";
+$roles = $con->query($sql);
+
+
+
 if (isset($_COOKIE['user_name'])){
     header("Location: personal_account.php");
 }

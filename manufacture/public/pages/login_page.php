@@ -17,6 +17,7 @@ include '../../src/login_handler.php';
     
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/login_page.css" />
+    <script src="../js/reg_ajax.js"></script>
 </head>
 <body>
   <!-- форма входа -->
@@ -24,7 +25,7 @@ include '../../src/login_handler.php';
     <a href="../index.php" class="back-arrow">
       <img src="../images/arrow-narrow-left-svgrepo-com.svg" alt="Назад" class="svg-icon">
     </a>
-    <div class="wrap_login" id="login_container" >
+    <div class="wrap_form" id="login_container" >
       <h2>Авторизация</h2>
       <form action="login_page.php" name="log_in" method="post"> 
           <div class="input-group">
@@ -48,23 +49,7 @@ include '../../src/login_handler.php';
     <!-- форма регистрации (изначально скрыта) -->
     <div class="wrap_login" id="registr_container" style="display: none;">
       <h2>Регистрация</h2>
-      <form id="register-form" action="../../src/register.php" method="post" >
-          <div class="input-group">
-              <label for="new-firstname">Имя</label>
-              <input type="text" id="new-firstname" name="new-firstname" required>
-          </div>
-          <div class="input-group">
-              <label for="new-lastname">Фамилия</label>
-              <input type="text" id="new-lastname" name="new-lastname" required>
-          </div>
-          <div class="input-group">
-              <label for="new-middlename">Отчество</label>
-              <input type="text" id="new-middlename" name="new-middlename" required>
-          </div>
-          <div class="input-group">
-              <label for="new-department">Отдел</label>
-              <input type="new-department" id="new-department" name="new-department" required>
-          </div>
+      <form id="register-form" action="../../src/edit_table_handler.php" method="post" >
           <div class="input-group">
               <label for="new-login">Логин</label>
               <input type="text" id="new-login" name="new-login" required>
@@ -73,8 +58,25 @@ include '../../src/login_handler.php';
               <label for="new-password">Пароль</label>
               <input type="password" id="new-password" name="new-password" required>
           </div>
+          <div class="input-group">
+            <label for="select-role">Роль</label>
+            <?php
+              if ($roles->num_rows > 0) {
+                  echo "<select id='select-role' name='select-role' onchange='show_reg(this.value)' required>";
+                  echo "<option value=''>--Выберите роль--</option>";
+                  // Вывод названий таблиц
+                  while($row = $roles->fetch_row()) {
+                      echo "<option value='".$row[0]."'>".$row[0]."</option>";
+                  }
+                  echo "</select>";
+              } else {
+                  echo "В базе данных нет ролей";
+              }
+            ?>
+          </div>
+          <div id="register_wrap"></div>
           
-          <button class="button" type="submit">Регистрация</button>
+          <button class="button" name="reg" type="submit">Регистрация</button>
       </form>
     </div>
     <p>

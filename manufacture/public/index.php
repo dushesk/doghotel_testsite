@@ -1,3 +1,6 @@
+<?php 
+  //include '../src/mail.php';
+?>
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -37,14 +40,13 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
     <link href="./css/index.css" rel="stylesheet" />
+    <script src="js/scroll.js"></script>
+    <script src="js/index_form.js"></script>
   </head>
   <body>
-    
     <div>
-      
-
       <div class="home-container">
-        <div class="home-navbar">
+        <div class="home-navbar" id="home-navbar">
           <header data-role="Header" class="home-header max-width-container">
             <div class="home-navbar1">
               <span class="home-logo-center navbar-logo-title">
@@ -104,6 +106,22 @@
             </div>
           </header>
         </div>
+        <div class="dark_background" id="sub_form_wrap" style="display: none" onclick="close_form()">
+          <div class="container wrap_form" onclick="stopPropagation(event)">
+            <form action="..\src\mail.php" method="post">
+              <h2>Подписка на новости</h2>
+              <div class="input-group">
+                <label for="mail">Почта</label>
+                <input type="mail" id="mail" name="mail" required>
+              </div>
+              <div class="wrap_checkbox">
+                <input type="checkbox" id="checkbox" name="mail" required>
+                <label for="mail">С правилами ознакомлен</label>
+              </div>
+              <button class="button" type="submit">Подписаться</button>
+            </form>
+          </div>
+        </div>
         <div class="home-main">
           <div class="home-hero section-container">
             <div class="home-max-width max-width-container">
@@ -125,7 +143,7 @@
                   </h1>
                   <div class="home-container04"></div>
                   <div class="home-btn-group">
-                    <button class="button">Подписаться</button>
+                    <button name="subscribe" class="button" onclick="show_sub_form()">Подписаться</button>
                   </div>
                 </div>
               </div>

@@ -74,6 +74,12 @@ body {
   fill: var(--dl-color-gray-black);
 }
 
+input, select{
+  border-radius: var(--dl-radius-radius-inputradius);
+  padding: 5px 10px;
+  min-width: 70%;
+}
+
 .button {
   color: var(--dl-color-gray-black80);
   cursor: pointer;

@@ -82,7 +82,7 @@ else if ($val == 'emp_shift'){
 else if ($val == 'sett'){
     echo 
     '<h1>Изменить пароль</h1>
-    <form action="login_page.php" name="log_in" method="post"> 
+    <form action="personal_account.php" name="log_in" method="post"> 
         <div class="input-pass">
             <label for="old_pass">Старый пароль</label>
             <input type="text" id="old_pass" name="old_pass" required>
@@ -159,6 +159,7 @@ else if ($val == 'sup_orders'){
         echo "</tr>";
         echo "</table>";
         echo "Нет заказов";
+        echo "<button >Скачать файл</button>";
     }
 }
 else if ($val == 'adm_db'){

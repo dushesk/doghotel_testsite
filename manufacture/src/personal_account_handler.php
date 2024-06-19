@@ -10,7 +10,7 @@ if (isset($_POST['log_out'])) {
 }
 
 // Проверка авторизации пользователя
-if (!isset($_SESSION['user_name'])) {
+if (!isset($_COOKIE['user_name'])) {
     header("Location: login_page.php");
     exit();
 }

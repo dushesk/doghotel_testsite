@@ -22,7 +22,7 @@ body{
     position: relative;
 }
 
-.wrap_form{
+.wrap_login{
     min-width: 330px;
     display: flex;
     flex-direction: column;

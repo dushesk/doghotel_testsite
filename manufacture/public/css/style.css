@@ -75,9 +75,8 @@ body {
 }
 
 input, select{
-  border-radius: var(--dl-radius-radius-inputradius);
-  padding: 5px 10px;
-  min-width: 70%;
+    border-radius: var(--dl-radius-radius-inputradius);
+    padding: 5px 10px;
 }
 
 .button {

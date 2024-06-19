@@ -13,12 +13,3 @@ function stopPropagation(event) {
     event.stopPropagation();
 }
 
-document.querySelectorAll('.navbar-link').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-});

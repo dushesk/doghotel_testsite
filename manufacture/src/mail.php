@@ -1,4 +1,4 @@
-<?php 
+<?php
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     // Отправка на почту
     $to = $_POST['mail'];
@@ -16,7 +16,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     
     //header("Location: ../public/index.php");
-    exit;
+    //exit;
 }
 
 ?>

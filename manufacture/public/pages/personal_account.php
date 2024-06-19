@@ -23,7 +23,7 @@ include '../../src/personal_account_handler.php';
 <body>
     <header data-role="Header" class="home-header max-width-container">
         <div class="home-navbar1">
-            <a class="home-logo-center navbar-logo-title" href="index.php">
+            <a class="home-logo-center navbar-logo-title" href="../index.php">
                 <span class="home-text">Лысьвенский завод<br><br>эмалированной посуды</span>
             </a>
             <div class="home-middle">

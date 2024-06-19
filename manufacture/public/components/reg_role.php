@@ -15,7 +15,7 @@ if ($chosen_role == 'employee'):
     </div>
     <div class="input-group">
         <label for="new-middlename">Отчество</label>
-        <input type="text" id="new-middlename" name="new-middlename" required>
+        <input type="text" id="new-middlename" name="new-middlename">
     </div>
 <?php
 endif;

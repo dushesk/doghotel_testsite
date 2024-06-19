@@ -37,7 +37,7 @@ function change_pass(){
 // Вывод таблицы при нажатии на ее название
 function show_table(table_name) {
     document.getElementById("message").innerHTML = "";
-    if (table_name == "") {
+    if (table_name === "") {
         document.getElementById("wrap_table").innerHTML = "";
         return;
     } else {

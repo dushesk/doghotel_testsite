@@ -1,8 +1,6 @@
-
 <?php
 include '../../src/login_handler.php';
 ?>
-
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -25,7 +23,7 @@ include '../../src/login_handler.php';
     <a href="../index.php" class="back-arrow">
       <img src="../images/arrow-narrow-left-svgrepo-com.svg" alt="Назад" class="svg-icon">
     </a>
-    <div class="wrap_form" id="login_container" >
+    <div class="wrap_login" id="login_container" >
       <h2>Авторизация</h2>
       <form action="login_page.php" name="log_in" method="post"> 
           <div class="input-group">

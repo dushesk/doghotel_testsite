@@ -54,10 +54,10 @@
               </span>
               <div class="home-middle">
                 <div class="home-right">
-                  <a class="navbar-link">О нас</a>
-                  <a class="navbar-link">Продукция</a>
-                  <a class="navbar-link">Сотрудничество</a>
-                  <a class="navbar-link">Контакты</a>
+                  <a class="navbar-link" href="#about">О нас</a>
+                  <a class="navbar-link" href="#products">Продукция</a>
+                  <a class="navbar-link" href="#contacts">Сотрудничество</a>
+                  <a class="navbar-link" href="#contacts">Контакты</a>
                 </div>
               </div>
               <div class="home-icons">
@@ -108,15 +108,15 @@
         </div>
         <div class="dark_background" id="sub_form_wrap" style="display: none" onclick="close_form()">
           <div class="container wrap_form" onclick="stopPropagation(event)">
-            <form action="..\src\mail.php" method="post">
+            <form action="../src/mail.php" method="post">
               <h2>Подписка на новости</h2>
               <div class="input-group">
                 <label for="mail">Почта</label>
                 <input type="mail" id="mail" name="mail" required>
               </div>
               <div class="wrap_checkbox">
-                <input type="checkbox" id="checkbox" name="mail" required>
-                <label for="mail">С правилами ознакомлен</label>
+                <input type="checkbox" id="checkbox" name="checkbox" required>
+                <label for="checkbox">С правилами ознакомлен</label>
               </div>
               <button class="button" type="submit">Подписаться</button>
             </form>
@@ -149,7 +149,7 @@
               </div>
             </div>
           </div>
-          <div class="section-container column">
+          <div class="section-container column" id="products">
             <div class="max-width-container">
               <div class="section-heading-section-heading">
                 <h1 class="section-heading-text Heading-2">
@@ -188,7 +188,7 @@
                 </div>
               </div>
             </div>
-            <div class="home-banner">
+            <div class="home-banner" id="about">
               <div class="home-container05">
                 <h3 class="home-text16 Heading-3">ЛЗЭП</h3>
               </div>
@@ -235,7 +235,7 @@
               src="https://optim.tildacdn.com/tild3061-3665-4731-a362-333636643639/-/format/webp/__v15.png"
               class="home-image2"/>
           </div>
-          <div class="section-container">
+          <div class="section-container" id="news">
             <div class="max-width-container">
               <div class="section-heading-section-heading section-heading-root-class-name">
                 <h1 class="section-heading-text Heading-2">
@@ -319,7 +319,7 @@
             </div>
           </div>
         </div>
-        <footer class="home-footer">
+        <footer class="home-footer" id="contacts">
           <div class="home-wrap-footer max-width-container">
             <div class="home-container09">
               <h3 class="home-text23">
@@ -327,13 +327,13 @@
               </h3>
               <div class="home-links-container">
                 <div class="home-container10">
-                  <span class="navbar-link home-text27">О нас</span>
+                  <span class="navbar-link home-text27"><a href="#about">О нас</a></span>
                 </div>
                 <div class="home-container11">
-                  <span class="navbar-link home-text27">Продукция</span>
+                  <span class="navbar-link home-text27"><a href="#products">Продукция</a></span>
                 </div>
                 <div class="home-container12">
-                  <span class="navbar-link home-text27">Вакансии</span>
+                  <span class="navbar-link home-text27"><a href="#news">Новости</a></span>
                 </div>
               </div>
             </div>

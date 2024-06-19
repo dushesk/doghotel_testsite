@@ -68,10 +68,19 @@ else if ($val == 'emp_shift'){
 
     echo "<h1>Смены</h1>";
     // Вывод оценок
-    if ($result_attendance->num_rows>0){        
+    if ($result_attendance->num_rows>0){
         while ($shift = $result_attendance->fetch_row()){
-            $date = date('d.m.Y',$shift[0]);
-            echo '<strong>'.$date. '</strong> '.$shift[1].' - '. $shift[2]. '<br>';
+            // Предполагаем, что $shift[0] содержит строку даты в формате 'YYYY-MM-DD'
+            $dateString = $shift[0];
+            
+            // Используем DateTime для преобразования и форматирования даты
+            $date = DateTime::createFromFormat('Y-m-d', $dateString);
+            
+            if ($date !== false) {
+                echo '<strong>' . $date->format('d.m.Y') . '</strong> ' . $shift[1] . ' - ' . $shift[2] . '<br>';
+            } else {
+                echo 'Некорректная дата: ' . $shift[0] . '<br>';
+            }
         }
     }
     else
@@ -116,12 +125,11 @@ else if ($val == 'sup_info'){
     }
 
     $stmt->close();
-}
-else if ($val == 'sup_orders'){
     // Создание SQL-запроса
     $sql = "SELECT * FROM order_info WHERE user_name='$user_name'";
     $result = $con->query($sql);
 
+    echo "<div id='orders'>";
     echo "<h1>Заказы</h1>";
 
     // Вывод данных таблицы
@@ -159,8 +167,38 @@ else if ($val == 'sup_orders'){
         echo "</tr>";
         echo "</table>";
         echo "Нет заказов";
-        echo "<button >Скачать файл</button>";
     }
+    echo "</div>";
+}
+else if ($val == 'sup_to_order'){
+    echo '
+    <form id="orderForm" action="../../src/process_order.php" method="post">
+        <table>
+            <tr>
+                <th>Название товара</th>
+                <th>Описание</th>
+                <th>Количество</th>
+            </tr>';
+    // Fetch products
+    $sql = "SELECT product_id, name_product, description FROM Products";
+    $result = $con->query($sql);
+    
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+            echo "<tr>";
+            echo "<td>" . htmlspecialchars($row['name_product']) . "</td>";
+            echo "<td>" . htmlspecialchars($row['description']) . "</td>";
+            echo "<td><input type='number' name='quantity[" . $row['product_id'] . "]' min='0' value='0'></td>";
+            echo "</tr>";
+        }
+    } else {
+        echo "<tr><td colspan='3'>No products available</td></tr>";
+    }
+    echo '
+        </table>
+        <br>
+        <input type="submit" class="button" value="Заказать">
+    </form>';
 }
 else if ($val == 'adm_db'){
     // SQL-запрос для получения названий всех таблиц
@@ -176,8 +214,8 @@ else if ($val == 'adm_db'){
     if ($tables->num_rows > 0) {
         echo "<select id='tableSelect' onchange='show_table(this.value)'>";
         // Вывод названий таблиц
-        while($row = $tables->fetch_assoc()) {
-            echo "<option value='".$row["TABLE_NAME"]."'>".$row["TABLE_NAME"]."</option>";
+        while($row = $tables->fetch_row()) {
+            echo "<option value='".$row[0]."'>".$row[0]."</option>";
         }
         echo "</select>";
     } else {
@@ -189,11 +227,8 @@ else if ($val == 'stats'){
     include 'stats.php';
 }
     
-    
 // Закрытие соединения
 
 $con->close();
 
 ?>
-
-

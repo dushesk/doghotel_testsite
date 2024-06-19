@@ -25,3 +25,5 @@ document.addEventListener('DOMContentLoaded', () => {
     onScrollHeader() // вызываем основную функцию onScrollHeader
   
 });
+
+document.querySelector('html').style = "scroll-behavior: smooth";

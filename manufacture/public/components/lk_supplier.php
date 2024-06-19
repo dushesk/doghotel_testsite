@@ -1,7 +1,7 @@
 
 <div class="sidebar">
     <button class='button' onclick='show_info(this.value)' value='sup_info'>Личные данные</button>
-    <button class='button' onclick='show_info(this.value)' value='sup_orders'>Заказы</button>
+    <button class='button' onclick='show_info(this.value)' value='sup_to_order'>Заказать</button>
     <button class='button' onclick='show_info(this.value)' value='sett'>Настройки</button>
 </div>
 <div class="main_content" id="main">

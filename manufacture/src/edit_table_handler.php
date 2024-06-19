@@ -64,15 +64,12 @@ $columns_name = $_SESSION['columns'];
 $deleted_rows = $_GET['s'];
 $data_json = $_GET['d'];
 
-
-
 $data = json_decode($data_json); // Декодировка из JSON
 
-// Удаление данных
-if (!empty($deleted_rows)){
+
+if ($deleted_rows!== ""){
     // Создаем SQL-запрос на удаление строк из таблицы
     $sql = "DELETE FROM $table_name WHERE $columns_name[0] IN ($deleted_rows)";
-
     // Выполняем запрос
     if ($con->query($sql) === TRUE) {
         echo "Строки $deleted_rows успешно удалены.";
